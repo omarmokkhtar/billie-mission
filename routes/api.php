@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CalculationController;
+use App\Http\Controllers\MarsDataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,4 @@ use App\Http\Controllers\CalculationController;
 |
 */
 
-Route::get('/get-mars-data', [CalculationController::class, 'getMarsData']);
+Route::get('/get-mars-data', [MarsDataController::class, 'getMarsData']);
