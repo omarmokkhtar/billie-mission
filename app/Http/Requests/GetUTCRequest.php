@@ -13,7 +13,7 @@ class GetUTCRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class GetUTCRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'entryTime' => 'required|date_format:Y-m-d H:i:s',
         ];
     }
 }
