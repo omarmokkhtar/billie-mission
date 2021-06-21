@@ -2,28 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\marsService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\GetUTCRequest;
-use App\Services\calculationService;
 
 class MarsDataController extends Controller
 {
-    protected $calculationService;
+    protected $marsService;
 
-    public function __construct(calculationService $calculationService)
+    public function __construct(marsService $marsService)
     {
-        $this->calculationService = $calculationService;
+        $this->$marsService = $marsService;
     }
 
     /**
      * Get the UTC time and return msd and mtc
+     * @Get("/mars-data?{entryTime}, where={"entryTime": "Y-m-d H:i:s"}")
      * @param GetUTCRequest $getDatesRequest
      * @return JsonResponse
      */
-    public function getMarsData(GetUTCRequest $getDatesRequest): JsonResponse
+    public function index(GetUTCRequest $getDatesRequest): JsonResponse
     {
-        $convertedTime = $this->calculationService->returnValue(request('entryTime'));
+        $convertedTime = $this->marsService->marsData(request('entryTime'));
 
         return response()->json($convertedTime);
     }

@@ -4,7 +4,7 @@ namespace App\Services;
 
 use Carbon\Carbon;
 
-class calculationService{
+class marsService{
 
     CONST j2000Epoch               = 2440587.5;
     CONST marsEarthDayDifferance   =  1.027491252;
@@ -31,7 +31,7 @@ class calculationService{
      * @param $utcTime
      * @return array
      */
-    public function returnValue($utcTime): array
+    public function marsData($utcTime): array
     {
         $j2000 = $this->prepareData($utcTime);
         $msd   = $this->marsSolDate($j2000);

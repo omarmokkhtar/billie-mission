@@ -14,4 +14,4 @@ use App\Http\Controllers\MarsDataController;
 |
 */
 
-Route::get('/get-mars-data', [MarsDataController::class, 'getMarsData']);
+Route::get('/mars-data', [MarsDataController::class, 'index']);

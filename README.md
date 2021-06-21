@@ -2,11 +2,13 @@
 
 - composer install 
 - php artisan serve.
+- GET `/mars-data?entryTime`
 
 ## Improvements
 
 - Get iso time from user not utc time
 - Make a cron job to auto fetch the time every one minute
+- Get more data like `Mission Sol` `Mission Time (Landing LMST)` `Local True Solar Time`
 
 ## Clarifications
 
