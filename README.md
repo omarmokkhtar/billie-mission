@@ -7,7 +7,7 @@ the Mars Sol Date (MSD) and the Martian Coordinated Time (MTC).
 
 - composer install 
 - php artisan serve.
-- GET `/mars-data?entryTime`
+- GET `/mars-data?$utcDateTime`
 
 ## Improvements
 

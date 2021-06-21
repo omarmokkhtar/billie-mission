@@ -28,12 +28,12 @@ class marsService{
 
     /**
      * Get ΔtJ2000 from prepare data and pass it to the needed methods and return the data
-     * @param $utcTime
+     * @param $utcDateTime
      * @return array
      */
-    public function marsData($utcTime): array
+    public function marsData($utcDateTime): array
     {
-        $j2000 = $this->prepareData($utcTime);
+        $j2000 = $this->prepareData($utcDateTime);
         $msd   = $this->marsSolDate($j2000);
         $mtc   = $this->hoursToTimeFormat($this->coordinatedMarsTime($msd));
 

@@ -18,7 +18,7 @@ class MarsDataController extends Controller
 
     /**
      * Get the UTC time and return msd and mtc
-     * @Get("/mars-data?{entryTime}, where={"entryTime": "Y-m-d H:i:s"}")
+     * @Get("/mars-data?{$utcDateTime}, where={"utcDateTime": "Y-m-d H:i:s"}")
      * @param GetUTCRequest $getDatesRequest
      * @return JsonResponse
      */
