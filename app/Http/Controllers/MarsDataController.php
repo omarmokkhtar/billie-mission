@@ -13,7 +13,7 @@ class MarsDataController extends Controller
 
     public function __construct(marsService $marsService)
     {
-        $this->$marsService = $marsService;
+        $this->marsService = $marsService;
     }
 
     /**
