@@ -19,7 +19,7 @@ class calculationService{
     protected function prepareData($utc): float
     {
         $date          = Carbon::parse('1970-01-01');
-        $milliSeconds = $date->diffInMilliseconds($utc);
+        $milliSeconds  = $date->diffInMilliseconds($utc);
         $jd_ut         = self::j2000Epoch + ($milliSeconds /8.64E7);
         $jd_tt         = $jd_ut + (37 + 32.184) / 86400;
 

@@ -10,5 +10,7 @@
 
 ## Clarifications
 
-- I have developed the required equations to get the MSD & MTC as referenced in https://www.giss.nasa.gov/tools/mars24/help/algorithm.html
+- Developed the required equations to get the MSD & MTC as referenced in https://www.giss.nasa.gov/tools/mars24/help/algorithm.html
+- Implemented a service layer to be able to develop the microservice logic in it.
+- Implemented a request layer to validate the input data
 
